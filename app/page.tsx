@@ -38,6 +38,7 @@ interface Receipt {
   date: string
   time: string
   associate: string
+  branch: string
   items: Array<{
     id: number
     name: string
@@ -49,9 +50,11 @@ interface Receipt {
     baseAmount?: number
     tax?: number
     itemCode?: string
-    size?: string
-    color?: string
-    material?: string
+    gender?: string
+    strapMaterial?: string
+    strapColor?: string
+    warranty?: string
+    skuId?: string
   }>
   subtotal: number
   tax: number
@@ -196,181 +199,192 @@ const [expandedItemFeedback, setExpandedItemFeedback] = useState([])
 
  const receipts = {
   current: {
-    id: "GHVFWQNN7JRMVJH4",
+    id: "TITINDDEL78452",
     date: "05-03-2026",
     time: "19:22:18",
-    associate: "Liam O’Connor",
-    branch: "Flinders Lane",
+    associate: "Rohan Mehta",
+    branch: "Titan World - Connaught Place",
     items: [
       {
         id: 0,
-        name: "Sweet Chilli Chicken",
-        size: "Regular Burger",
-        description: "Grilled chicken breast, sweet chilli sauce, lettuce, tomato & herb mayo",
-        price: 14.50,
+        name: "Titan Celestor 2.0 Smartwatch",
+        description: "Premium smartwatch with fitness tracking, AMOLED display & Bluetooth calling",
+        price: 10350.0,
         quantity: 1,
-        category: "Chicken Burgers",
+        category: "Smart Watches",
         taxApplicable: true,
-        baseAmount: 13.18,
-        tax: 1.32,
-        itemCode: "B101",
-        type: "Chicken",
+        baseAmount: 8771.19,
+        tax: 1578.81,
+        itemCode: "SW248",
+        gender: "Unisex",
+        strapMaterial: "Silicone & Nylon",
+        strapColor: "Blue",
+        warranty: "12 Months",
+        skuId: "90248AP02C",
       },
       {
         id: 1,
-        name: "Famous Grill'd Chips",
-        size: "Mini",
-        description: "Lightly salted crispy chips served with tomato relish",
-        price: 6.90,
+        name: "Titan Minimals Quartz Analog Watch",
+        description: "Minimal black dial analog watch with premium metallic finish",
+        price: 3595.0,
         quantity: 1,
-        category: "Chips",
+        category: "Analog Watches",
         taxApplicable: true,
-        baseAmount: 6.27,
-        tax: 0.63,
-        itemCode: "S210",
+        baseAmount: 3046.61,
+        tax: 548.39,
+        itemCode: "AQ106",
+        gender: "Men",
+        strapMaterial: "Metal",
+        strapColor: "Black",
+        warranty: "24 Months",
+        skuId: "NU1806NM01",
       },
       {
         id: 2,
-        name: "Salted Caramel",
-        size: "Regular Shake",
-        description: "Creamy milkshake blended with salted caramel",
-        price: 9.00,
+        name: "Titan Men's Timeless Charm",
+        description: "Classic leather strap watch designed for everyday elegance",
+        price: 1795.0,
         quantity: 1,
-        category: "Shakes",
+        category: "Leather Watches",
         taxApplicable: true,
-        baseAmount: 8.18,
-        tax: 0.82,
-        itemCode: "D330",
+        baseAmount: 1521.19,
+        tax: 273.81,
+        itemCode: "LC229",
+        gender: "Men",
+        strapMaterial: "Leather",
+        strapColor: "Brown",
+        warranty: "24 Months",
+        skuId: "NL1729SL02",
       },
     ],
-    subtotal: 27.64,
-    tax: 2.76,
-    total: 30.40,
+    subtotal: 13339.0,
+    tax: 2401.01,
+    total: 15740.0,
   },
 
   hist1: {
-    id: "GHVFWQNN7JRMVJS9",
+    id: "TITINDMUM49381",
     date: "20-01-2026",
     time: "14:22:18",
-    associate: "Emily Harper",
-    branch: "Southbank",
+    associate: "Ananya Kapoor",
+    branch: "Titan World - Phoenix Mall",
     items: [
       {
         id: 0,
-        name: "Bonfire BBQ",
-        size: "Regular Burger",
-        description: "Grass-fed beef, bacon, cheddar, lettuce, tomato & smokey BBQ sauce",
-        price: 18.90,
+        name: "Titan Women's Lagan Chic",
+        description: "Elegant white leather strap watch with contemporary styling",
+        price: 1895.0,
         quantity: 1,
-        category: "Specialty Wagyu Burgers",
+        category: "Women's Watches",
         taxApplicable: true,
-        baseAmount: 17.18,
-        tax: 1.72,
-        itemCode: "B120",
-        type: "Beef",
+        baseAmount: 1605.93,
+        tax: 289.07,
+        itemCode: "WL656",
+        gender: "Women",
+        strapMaterial: "Leather",
+        strapColor: "White",
+        warranty: "24 Months",
+        skuId: "2656WL01",
       },
       {
         id: 1,
-        name: "Sliders Pair",
-        size: "2 Mini Burgers",
-        description: "Two mini burgers with grilled beef patties, cheese & house relish",
-        price: 15.50,
+        name: "Titan AiRA Women Smartwatch",
+        description: "Smartwatch with health tracking, notifications & rose gold finish",
+        price: 6750.0,
         quantity: 1,
-        category: "Sliders",
+        category: "Smart Watches",
         taxApplicable: true,
-        baseAmount: 14.09,
-        tax: 1.41,
-        itemCode: "B210",
-      },
-      {
-        id: 2,
-        name: "Zucchini Chips",
-        size: "Mini",
-        description: "Crispy zucchini chips served with herb mayo",
-        price: 4.90,
-        quantity: 1,
-        category: "Chips",
-        taxApplicable: true,
-        baseAmount: 4.45,
-        tax: 0.45,
-        itemCode: "S215",
+        baseAmount: 5720.34,
+        tax: 1029.66,
+        itemCode: "SW416",
+        gender: "Women",
+        strapMaterial: "Silicone",
+        strapColor: "Rose Gold",
+        warranty: "12 Months",
+        skuId: "95416KM01K",
       },
     ],
-    subtotal: 33.72,
-    tax: 3.38,
-    total: 37.10,
+    subtotal: 7326.27,
+    tax: 1318.73,
+    total: 8645.0,
   },
 
   hist2: {
-    id: "GHVFWQNN7JRMVJV7",
+    id: "TITINDBLR28476",
     date: "15-12-2025",
     time: "12:45:33",
-    associate: "Noah Williams",
-    branch: "Carlton",
+    associate: "Arjun Nair",
+    branch: "Titan World - Orion Mall",
     items: [
       {
         id: 0,
-        name: "Hula Hen",
-        size: "Regular Burger",
-        description: "Grilled chicken breast, pineapple, cheese, lettuce & mayo",
-        price: 17.50,
+        name: "Sonata Poze Quartz Analog",
+        description: "Rose gold stainless steel watch with minimalist dial",
+        price: 1495.0,
         quantity: 1,
-        category: "Healthy Chicken Burgers",
+        category: "Sonata Collection",
         taxApplicable: true,
-        baseAmount: 15.91,
-        tax: 1.59,
-        itemCode: "B140",
-        type: "Chicken",
+        baseAmount: 1266.95,
+        tax: 228.05,
+        itemCode: "SZ087",
+        gender: "Women",
+        strapMaterial: "Stainless Steel",
+        strapColor: "Rose Gold",
+        warranty: "12 Months",
+        skuId: "SP80087WM01",
       },
       {
         id: 1,
-        name: "Chipotle",
-        size: "Regular Burger",
-        description: "Grass-fed beef, cheese, lettuce, tomato & smoky chipotle mayo",
-        price: 16.90,
+        name: "Fastrack UFO Quartz Watch",
+        description: "Bold stainless steel analog watch with futuristic styling",
+        price: 2495.0,
         quantity: 1,
-        category: "Healthy Chicken Burgers",
+        category: "Fastrack Watches",
         taxApplicable: true,
-        baseAmount: 15.36,
-        tax: 1.54,
-        itemCode: "B150",
-        type: "Beef",
-      },
-      {
-        id: 2,
-        name: "Mango Pash",
-        size: "Regular Drink",
-        description: "Refreshing mango and passionfruit house soda",
-        price: 9.00,
-        quantity: 1,
-        category: "Drinks",
-        taxApplicable: true,
-        baseAmount: 8.18,
-        tax: 0.82,
-        itemCode: "D310",
+        baseAmount: 2114.41,
+        tax: 380.59,
+        itemCode: "FT327",
+        gender: "Men",
+        strapMaterial: "Stainless Steel",
+        strapColor: "Silver",
+        warranty: "24 Months",
+        skuId: "3327SM01",
       },
     ],
-    subtotal: 39.45,
-    tax: 3.95,
-    total: 43.40,
+    subtotal: 3381.36,
+    tax: 608.64,
+    total: 3990.0,
   },
 };
 
-  const currentReceipt = receipts[currentReceiptId]
+const currentReceipt = receipts[currentReceiptId]
 
-  const totalSlides = 2
+const totalSlides = 2
 
-  const transactionHistory = [
-    {
-      id: "current",
-      date: "05-03-2026",
-      branch: "Grill'd",
-      amount: currentReceiptId === "current" ? receipts.current.subtotal + receipts.current.tax : 30.40,
-    },
-    { id: "hist1", date: "20-01-2026", branch: "Grill'd", amount: 37.10 },
-    { id: "hist2", date: "15-12-2025", branch: "Grill'd", amount: 43.40 },
-  ]
-
+const transactionHistory = [
+  {
+    id: "current",
+    date: "05-03-2026",
+    branch: "Titan World",
+    amount:
+      currentReceiptId === "current"
+        ? receipts.current.total
+        : 15740.0,
+  },
+  {
+    id: "hist1",
+    date: "20-01-2026",
+    branch: "Titan World",
+    amount: 8645.0,
+  },
+  {
+    id: "hist2",
+    date: "15-12-2025",
+    branch: "Titan World",
+    amount: 3990.0,
+  },
+]
+  
   const toggleProductExpansion = (productId: number) => {
     setExpandedProducts((prev) =>
       prev.includes(productId) ? prev.filter((id) => id !== productId) : [...prev, productId],
