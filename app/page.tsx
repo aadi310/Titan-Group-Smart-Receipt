@@ -1366,12 +1366,6 @@ Powered by RDEP
 
             </h3>
 
-            <div className="text-xs text-[#6B6475] mt-0.5">
-
-              Share your Titan shopping experience
-
-            </div>
-
           </div>
 
         </div>
@@ -1380,7 +1374,7 @@ Powered by RDEP
         {/* Badge */}
         <span className="text-[10px] font-semibold text-[#2E1A47] bg-[#F7F5FA] border border-[#DDD5EA] px-2.5 py-1 rounded-full">
 
-          QUICK FEEDBACK
+          FEEDBACK
 
         </span>
 
@@ -1979,11 +1973,6 @@ Powered by RDEP
 
             </div>
 
-            <div className="text-xs text-[#6B6475] mt-1 leading-relaxed max-w-[220px]">
-
-              One loyalty membership across Titan, Fastrack, Helios, Tanishq and more.
-
-            </div>
 
           </div>
 
@@ -1999,33 +1988,6 @@ Powered by RDEP
 
       </div>
 
-
-      {/* Benefits */}
-      <div className="bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl p-3 mb-4">
-
-        <div className="flex flex-wrap gap-2">
-
-          {[
-            "Exclusive Offers",
-            "Bonus Rewards",
-            "Partner Benefits",
-            "Referral Rewards",
-          ].map((benefit) => (
-
-            <div
-              key={benefit}
-              className="text-[10px] bg-white border border-[#DDD5EA] text-[#2E1A47] px-2.5 py-1 rounded-full font-medium"
-            >
-
-              {benefit}
-
-            </div>
-
-          ))}
-
-        </div>
-
-      </div>
 
 
       {/* Form */}
