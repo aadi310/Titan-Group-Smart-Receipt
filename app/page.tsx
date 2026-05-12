@@ -1295,6 +1295,238 @@ Powered by RDEP
   </div>
 
 </div>
+
+          {/* Feedback Section */}
+<div className="bg-white rounded-2xl border border-[#E6E1EE] shadow-md mx-3 mt-4 p-4">
+
+  {feedbackSubmitted ? (
+
+    <div className="text-center py-6 bg-[#F7F5FA] rounded-2xl border border-[#E6E1EE]">
+
+      {/* Success Icon */}
+      <div className="w-14 h-14 bg-[#2E1A47] rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+
+        <svg
+          className="w-7 h-7 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2.5"
+            d="M5 13l4 4L19 7"
+          />
+
+        </svg>
+
+      </div>
+
+
+      {/* Text */}
+      <div className="text-base font-semibold text-[#1F1B24] mb-1">
+
+        Thank you for your feedback
+
+      </div>
+
+      <div className="text-sm text-[#6B6475] leading-relaxed px-5">
+
+        Your feedback helps Titan improve every shopping and ownership experience.
+
+      </div>
+
+    </div>
+
+  ) : (
+
+    <div className="space-y-5">
+
+      {/* Header */}
+      <div className="flex items-center justify-between">
+
+        <div className="flex items-center">
+
+          {/* Icon */}
+          <div className="bg-[#2E1A47] p-2.5 rounded-xl mr-3 shadow-sm">
+
+            <Star className="w-4 h-4 text-[#C8A96B] fill-[#C8A96B]" />
+
+          </div>
+
+
+          {/* Title */}
+          <div>
+
+            <h3 className="text-base font-semibold text-[#1F1B24]">
+
+              Rate Your Experience
+
+            </h3>
+
+            <div className="text-xs text-[#6B6475] mt-0.5">
+
+              Share your Titan shopping experience
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        {/* Badge */}
+        <span className="text-[10px] font-semibold text-[#2E1A47] bg-[#F7F5FA] border border-[#DDD5EA] px-2.5 py-1 rounded-full">
+
+          QUICK FEEDBACK
+
+        </span>
+
+      </div>
+
+
+      {/* Star Rating */}
+      <div className="flex justify-center gap-3 py-2">
+
+        {[1,2,3,4,5].map((star) => (
+
+          <button
+            key={star}
+            onClick={() => {
+              setRating(star)
+              setSelectedTags([])
+            }}
+            className="transition-transform active:scale-90"
+          >
+
+            <Star
+              className={`h-9 w-9 transition-colors ${
+                star <= rating
+                  ? "fill-[#C8A96B] text-[#C8A96B]"
+                  : "text-[#DDD5EA]"
+              }`}
+            />
+
+          </button>
+
+        ))}
+
+      </div>
+
+
+      {/* Dynamic Tags */}
+      {rating > 0 && (
+
+        <div className="space-y-3">
+
+          <div className="text-[11px] font-semibold text-[#6B6475] uppercase tracking-wide">
+
+            Tell us more about your experience
+
+          </div>
+
+
+          <div className="flex flex-wrap gap-2">
+
+            {(rating >= 4
+              ? [
+                  "Premium Design",
+                  "Excellent Service",
+                  "Product Quality",
+                  "Value for Money",
+                  "Store Experience",
+                  "Fast Billing",
+                ]
+              : [
+                  "Product Availability",
+                  "Service Experience",
+                  "Waiting Time",
+                  "Pricing",
+                  "Store Assistance",
+                  "Checkout Experience",
+                ]
+            ).map((item) => (
+
+              <button
+                key={item}
+                onClick={() =>
+                  setSelectedTags((prev) =>
+                    prev.includes(item)
+                      ? prev.filter((tag) => tag !== item)
+                      : [...prev, item]
+                  )
+                }
+                className={`text-[11px] px-3 py-1.5 rounded-full border transition-all ${
+                  selectedTags.includes(item)
+                    ? "bg-[#2E1A47] text-white border-[#2E1A47]"
+                    : "border-[#DDD5EA] bg-[#F7F5FA] text-[#6B6475]"
+                }`}
+              >
+
+                {item}
+
+              </button>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      )}
+
+
+      {/* Comment */}
+      <div className="space-y-1.5">
+
+        <label className="text-[11px] font-semibold text-[#6B6475] uppercase tracking-wide">
+
+          Additional Feedback
+
+        </label>
+
+        <textarea
+          rows={3}
+          placeholder="Share your experience with Titan"
+          className="w-full p-3 text-sm border border-[#DDD5EA] rounded-2xl bg-white focus:ring-1 focus:ring-[#2E1A47] focus:border-[#2E1A47] outline-none resize-none transition"
+          value={feedbackText}
+          onChange={(e) => setFeedbackText(e.target.value)}
+        />
+
+      </div>
+
+
+      {/* Submit */}
+      <button
+        className={`w-full h-11 text-sm font-semibold rounded-2xl transition active:scale-[0.98] ${
+          rating
+            ? "bg-[#2E1A47] text-white hover:opacity-95"
+            : "bg-[#ECE8F3] text-[#9B94A8] cursor-not-allowed"
+        }`}
+        onClick={handleFeedbackSubmit}
+        disabled={!rating}
+      >
+
+        Submit Feedback
+
+      </button>
+
+
+      {/* Footer */}
+      <p className="text-[10px] text-center text-[#6B6475] leading-relaxed px-4">
+
+        Your feedback helps us enhance every Titan experience across stores and digital channels.
+
+      </p>
+
+    </div>
+
+  )}
+
+</div>
+          
           {/* Promo Banner Carousel */}
 <div className="bg-white rounded-2xl border border-[#E6E1EE] shadow-md overflow-hidden mx-3 mt-4 relative">
 
@@ -1667,25 +1899,56 @@ Powered by RDEP
 </div>
           
 
-          {/* Join Relish Rewards Section */}
-<div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
+          {/* Join Titan Encircle Section */}
+<div className="bg-white rounded-2xl border border-[#E6E1EE] shadow-md mx-3 mt-4 p-4">
 
   {profileUpdateSuccess ? (
 
-    <div className="text-center py-4 bg-green-50 rounded-xl border border-green-100">
+    <div className="text-center py-5 bg-[#F7F5FA] rounded-2xl border border-[#E6E1EE]">
 
-      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7"></path>
+      {/* Success Icon */}
+      <div className="w-14 h-14 bg-[#2E1A47] rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+
+        <svg
+          className="w-7 h-7 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2.5"
+            d="M5 13l4 4L19 7"
+          />
+
         </svg>
+
       </div>
 
-      <div className="text-sm font-semibold text-gray-900 mb-1">
-        Welcome to Relish!
+
+      {/* Success Text */}
+      <div className="text-base font-semibold text-[#1F1B24] mb-1">
+
+        Welcome to Titan Encircle
+
       </div>
 
-      <div className="text-xs text-green-700 font-medium">
-        Points from this order have been added to your account.
+      <div className="text-sm text-[#6B6475] leading-relaxed px-4">
+
+        Reward points from this purchase have been added to your Encircle membership account.
+
+      </div>
+
+
+      {/* Badge */}
+      <div className="mt-4 inline-flex items-center gap-2 bg-[#2E1A47] text-white text-xs font-medium px-3 py-1.5 rounded-full">
+
+        <span className="w-2 h-2 rounded-full bg-[#C8A96B]" />
+
+        +780 Encircle Points Added
+
       </div>
 
     </div>
@@ -1693,29 +1956,74 @@ Powered by RDEP
   ) : (
 
     <>
+
       {/* Header */}
-      <div className="flex items-center justify-between mb-3">
+      <div className="flex items-start justify-between mb-4">
 
-        <div className="flex items-center">
+        <div className="flex items-start">
 
-          <div className="bg-[#E1251B] p-2 rounded-lg mr-3">
+          {/* Icon */}
+          <div className="bg-[#2E1A47] p-2.5 rounded-xl mr-3 shadow-sm">
+
             <User2 className="h-4 w-4 text-white" />
+
           </div>
 
+
+          {/* Text */}
           <div>
-            <div className="text-sm font-semibold text-gray-900">
-              Join Relish Rewards
+
+            <div className="text-base font-semibold text-[#1F1B24]">
+
+              Join Titan Encircle
+
             </div>
-            <div className="text-xs text-gray-500">
-              Earn points every time you Grill'd
+
+            <div className="text-xs text-[#6B6475] mt-1 leading-relaxed max-w-[220px]">
+
+              One loyalty membership across Titan, Fastrack, Helios, Tanishq and more.
+
             </div>
+
           </div>
 
         </div>
 
-        <span className="text-[10px] font-semibold bg-[#E1251B] text-white px-2 py-0.5 rounded-full">
-          +100 pts
+
+        {/* Points Badge */}
+        <span className="text-[10px] font-semibold bg-[#C8A96B] text-white px-2.5 py-1 rounded-full whitespace-nowrap">
+
+          +780 pts
+
         </span>
+
+      </div>
+
+
+      {/* Benefits */}
+      <div className="bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl p-3 mb-4">
+
+        <div className="flex flex-wrap gap-2">
+
+          {[
+            "Exclusive Offers",
+            "Bonus Rewards",
+            "Partner Benefits",
+            "Referral Rewards",
+          ].map((benefit) => (
+
+            <div
+              key={benefit}
+              className="text-[10px] bg-white border border-[#DDD5EA] text-[#2E1A47] px-2.5 py-1 rounded-full font-medium"
+            >
+
+              {benefit}
+
+            </div>
+
+          ))}
+
+        </div>
 
       </div>
 
@@ -1723,48 +2031,78 @@ Powered by RDEP
       {/* Form */}
       <div className="space-y-3">
 
-        <div className="space-y-1">
-          <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">
+        {/* Full Name */}
+        <div className="space-y-1.5">
+
+          <label className="text-[11px] font-semibold text-[#6B6475] uppercase tracking-wide">
+
             Full Name
+
           </label>
 
           <input
             type="text"
-            placeholder="Your Name"
+            placeholder="Enter your full name"
             value={profile.name}
-            onChange={(e) => setProfile((prev) => ({ ...prev, name: e.target.value }))}
-            className="w-full h-10 px-3 text-xs border border-gray-200 rounded-lg focus:outline-none focus:border-[#E1251B]"
+            onChange={(e) =>
+              setProfile((prev) => ({
+                ...prev,
+                name: e.target.value,
+              }))
+            }
+            className="w-full h-11 px-4 text-sm border border-[#DDD5EA] rounded-xl bg-white focus:outline-none focus:border-[#2E1A47] transition-colors"
           />
+
         </div>
 
 
-        <div className="space-y-1">
-          <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">
+        {/* Email */}
+        <div className="space-y-1.5">
+
+          <label className="text-[11px] font-semibold text-[#6B6475] uppercase tracking-wide">
+
             Email Address
+
           </label>
 
           <input
             type="email"
             placeholder="name@example.com"
             value={profile.email}
-            onChange={(e) => setProfile((prev) => ({ ...prev, email: e.target.value }))}
-            className="w-full h-10 px-3 text-xs border border-gray-200 rounded-lg focus:outline-none focus:border-[#E1251B]"
+            onChange={(e) =>
+              setProfile((prev) => ({
+                ...prev,
+                email: e.target.value,
+              }))
+            }
+            className="w-full h-11 px-4 text-sm border border-[#DDD5EA] rounded-xl bg-white focus:outline-none focus:border-[#2E1A47] transition-colors"
           />
+
         </div>
 
 
-        <div className="space-y-1">
-          <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">
+        {/* Mobile */}
+        <div className="space-y-1.5">
+
+          <label className="text-[11px] font-semibold text-[#6B6475] uppercase tracking-wide">
+
             Mobile Number
+
           </label>
 
           <input
             type="tel"
-            placeholder="+61 ..."
+            placeholder="+91 XXXXX XXXXX"
             value={profile.mobile}
-            onChange={(e) => setProfile((prev) => ({ ...prev, mobile: e.target.value }))}
-            className="w-full h-10 px-3 text-xs border border-gray-200 rounded-lg focus:outline-none focus:border-[#E1251B]"
+            onChange={(e) =>
+              setProfile((prev) => ({
+                ...prev,
+                mobile: e.target.value,
+              }))
+            }
+            className="w-full h-11 px-4 text-sm border border-[#DDD5EA] rounded-xl bg-white focus:outline-none focus:border-[#2E1A47] transition-colors"
           />
+
         </div>
 
       </div>
@@ -1772,206 +2110,28 @@ Powered by RDEP
 
       {/* CTA */}
       <button
-        className="w-full mt-4 bg-[#E1251B] text-white h-11 text-xs font-semibold rounded-xl shadow-md transition active:scale-[0.98]"
+        className="w-full mt-5 bg-[#2E1A47] text-white h-12 text-sm font-semibold rounded-2xl shadow-sm transition active:scale-[0.98] hover:opacity-95"
         onClick={handleProfileUpdate}
       >
-        Join Relish & Earn Points
+
+        Join Titan Encircle
+
       </button>
 
 
-      {/* Helper text */}
-      <div className="text-[10px] text-gray-400 text-center mt-2">
-        By joining, you agree to receive Relish rewards updates.
+      {/* Footer Text */}
+      <div className="text-[10px] text-[#6B6475] text-center leading-relaxed mt-3 px-2">
+
+        By joining Titan Encircle, you agree to receive loyalty benefits, exclusive offers and member communications.
+
       </div>
 
     </>
-  )}
-
-</div>
-
-      {/* Feedback Section */}
-<div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
-
-  {feedbackSubmitted ? (
-
-    <div className="text-center py-6 bg-green-50 rounded-xl border border-green-100">
-
-      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7"></path>
-        </svg>
-      </div>
-
-      <div className="text-sm font-semibold text-gray-900 mb-1">
-        Thanks for your feedback!
-      </div>
-
-      <div className="text-xs text-gray-500">
-        Your input helps us improve every Grill'd experience.
-      </div>
-
-    </div>
-
-  ) : (
-
-    <div className="space-y-4">
-
-      {/* Header */}
-      <div className="flex items-center justify-between">
-
-        <div className="flex items-center">
-
-          <div className="bg-[#E1251B] p-2 rounded-lg mr-3">
-            <svg
-              viewBox="0 0 24 24"
-              className="w-4 h-4 text-white"
-              fill="currentColor"
-            >
-              <path d="M3 11h18M4 14h16M5 17h14M6 8c1-3 11-3 12 0" stroke="white" strokeWidth="1.5"/>
-            </svg>
-          </div>
-
-          <h3 className="text-base font-semibold text-gray-900">
-            Rate Your Experience
-          </h3>
-
-        </div>
-
-        <span className="text-[10px] font-semibold text-[#E1251B] bg-red-50 px-2 py-1 rounded">
-          QUICK FEEDBACK
-        </span>
-
-      </div>
-
-
-      {/* Burger Rating */}
-      <div className="flex justify-center gap-3 py-1">
-
-        {[1,2,3,4,5].map((burger) => (
-
-          <button
-            key={burger}
-            onClick={() => {
-              setRating(burger)
-              setSelectedTags([])
-            }}
-            className="transition-transform active:scale-90"
-          >
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              className={`h-9 w-9 ${
-                burger <= rating
-                  ? "fill-[#E1251B] text-[#E1251B]"
-                  : "text-gray-200"
-              }`}
-            >
-              <path d="M3 11h18M4 14h16M5 17h14M6 8c1-3 11-3 12 0" stroke="currentColor" strokeWidth="1.5" fill="currentColor"/>
-            </svg>
-
-          </button>
-
-        ))}
-
-      </div>
-
-
-      {/* Dynamic Feedback Chips */}
-      {rating > 0 && (
-
-        <div className="space-y-2">
-
-          <div className="text-[11px] font-semibold text-gray-500 uppercase tracking-wide">
-            Tell us more about your visit
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-
-            {(rating >= 4
-              ? [
-                  "Fresh ingredients",
-                  "Great taste",
-                  "Friendly staff",
-                  "Fast service",
-                  "Good value",
-                  "Clean restaurant",
-                ]
-              : [
-                  "Food quality",
-                  "Order accuracy",
-                  "Long wait time",
-                  "Service experience",
-                  "Restaurant cleanliness",
-                  "Value for money",
-                ]
-            ).map((item) => (
-
-              <button
-                key={item}
-                onClick={() =>
-                  setSelectedTags((prev) =>
-                    prev.includes(item)
-                      ? prev.filter((tag) => tag !== item)
-                      : [...prev, item]
-                  )
-                }
-                className={`text-[11px] px-3 py-1.5 rounded-full border transition ${
-                  selectedTags.includes(item)
-                    ? "bg-[#E1251B] text-white border-[#E1251B]"
-                    : "border-gray-200 bg-gray-50"
-                }`}
-              >
-                {item}
-              </button>
-
-            ))}
-
-          </div>
-
-        </div>
-
-      )}
-
-
-      {/* Optional Comment */}
-      <div className="space-y-1">
-
-        <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">
-          Additional Feedback (Optional)
-        </label>
-
-        <textarea
-          rows={3}
-          placeholder="Share any additional feedback"
-          className="w-full p-3 text-xs border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#E1251B] focus:border-[#E1251B] outline-none resize-none"
-          value={feedbackText}
-          onChange={(e) => setFeedbackText(e.target.value)}
-        />
-
-      </div>
-
-
-      {/* Submit Button */}
-      <button
-        className="w-full bg-[#E1251B] text-white h-10 text-xs font-semibold rounded-xl transition active:scale-[0.98]"
-        onClick={handleFeedbackSubmit}
-        disabled={!rating}
-      >
-        Submit Feedback
-      </button>
-
-
-      <p className="text-[10px] text-center text-gray-400">
-        Your feedback helps us improve every visit.
-      </p>
-
-    </div>
 
   )}
 
 </div>
-
+          
           {/* Just For You - Coupon Section */}
 {/* Just For You - Coupon Section */}
 <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
