@@ -1321,7 +1321,7 @@ Powered by RDEP
           >
 
             <img
-              src="/images/design-mode/titan-banner-1.WEBP"
+              src="/images/design-mode/titan-banner-1.webp"
               alt="Titan Sale"
               className="w-full h-full object-cover"
             />
@@ -1367,7 +1367,7 @@ Powered by RDEP
           >
 
             <img
-              src="/images/design-mode/titan-banner-2.WEBP"
+              src="/images/design-mode/titan-banner-2.webp"
               alt="Titan Divers Collection"
               className="w-full h-full object-cover"
             />
@@ -1413,7 +1413,7 @@ Powered by RDEP
           >
 
             <img
-              src="/images/design-mode/titan-banner-3.WEBP"
+              src="/images/design-mode/titan-banner-3.webp"
               alt="Titan Raga Sale"
               className="w-full h-full object-cover"
             />
