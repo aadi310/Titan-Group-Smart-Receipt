@@ -1295,6 +1295,181 @@ Powered by RDEP
   </div>
 
 </div>
+          {/* Promo Banner Carousel */}
+<div className="bg-white rounded-2xl border border-[#E6E1EE] shadow-md overflow-hidden mx-3 mt-4 relative">
+
+  <Carousel
+    className="w-full"
+    setApi={setPromoApi}
+    opts={{
+      loop: true,
+    }}
+  >
+
+    <CarouselContent>
+
+      {/* Banner 1 */}
+      <CarouselItem>
+
+        <div className="relative w-full aspect-[3/1] bg-[#1E102E] overflow-hidden">
+
+          <a
+            href="https://www.titan.co.in/shop/titan-sale?lang=en_IN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full h-full"
+          >
+
+            <img
+              src="/images/design-mode/titan-banner-1.WEBP"
+              alt="Titan Sale"
+              className="w-full h-full object-cover"
+            />
+
+          </a>
+
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-transparent pointer-events-none" />
+
+
+          {/* CTA */}
+          <a
+            href="https://www.titan.co.in/shop/titan-sale?lang=en_IN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-4 right-4 z-10"
+          >
+
+            <button className="bg-[#2E1A47] text-white text-xs font-medium px-4 py-2 rounded-xl shadow-sm border border-white/10 hover:opacity-95 transition">
+
+              Shop Sale
+
+            </button>
+
+          </a>
+
+        </div>
+
+      </CarouselItem>
+
+
+      {/* Banner 2 */}
+      <CarouselItem>
+
+        <div className="relative w-full aspect-[3/1] bg-[#1E102E] overflow-hidden">
+
+          <a
+            href="https://www.titan.co.in/divers-clp.html?lang=en_IN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full h-full"
+          >
+
+            <img
+              src="/images/design-mode/titan-banner-2.WEBP"
+              alt="Titan Divers Collection"
+              className="w-full h-full object-cover"
+            />
+
+          </a>
+
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-transparent pointer-events-none" />
+
+
+          {/* CTA */}
+          <a
+            href="https://www.titan.co.in/divers-clp.html?lang=en_IN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-4 right-4 z-10"
+          >
+
+            <button className="bg-[#2E1A47] text-white text-xs font-medium px-4 py-2 rounded-xl shadow-sm border border-white/10 hover:opacity-95 transition">
+
+              Explore Collection
+
+            </button>
+
+          </a>
+
+        </div>
+
+      </CarouselItem>
+
+
+      {/* Banner 3 */}
+      <CarouselItem>
+
+        <div className="relative w-full aspect-[3/1] bg-[#1E102E] overflow-hidden">
+
+          <a
+            href="https://www.titan.co.in/shop/raga-watches-on-sale?lang=en_IN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full h-full"
+          >
+
+            <img
+              src="/images/design-mode/titan-banner-3.WEBP"
+              alt="Titan Raga Sale"
+              className="w-full h-full object-cover"
+            />
+
+          </a>
+
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-transparent pointer-events-none" />
+
+
+          {/* CTA */}
+          <a
+            href="https://www.titan.co.in/shop/raga-watches-on-sale?lang=en_IN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-4 right-4 z-10"
+          >
+
+            <button className="bg-[#2E1A47] text-white text-xs font-medium px-4 py-2 rounded-xl shadow-sm border border-white/10 hover:opacity-95 transition">
+
+              Discover Raga
+
+            </button>
+
+          </a>
+
+        </div>
+
+      </CarouselItem>
+
+    </CarouselContent>
+
+
+    {/* Pagination Dots */}
+    <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-10">
+
+      {[0, 1, 2].map((index) => (
+
+        <button
+          key={index}
+          onClick={() => promoApi?.scrollTo(index)}
+          className={`h-1.5 rounded-full transition-all duration-300 ${
+            currentSlide === index
+              ? "w-5 bg-white"
+              : "w-1.5 bg-white/50"
+          }`}
+        />
+
+      ))}
+
+    </div>
+
+  </Carousel>
+
+</div>
 
           {/* Rewards Loyalty Section */}
 <div className="bg-white rounded-2xl shadow-md border border-[#E6E1EE] mt-4 mx-3 overflow-hidden">
@@ -1554,120 +1729,6 @@ Powered by RDEP
 
 </div>
           
-{/* Promo Banner Carousel */}
-<div className="bg-white rounded-2xl border border-gray-200 shadow-md overflow-hidden mx-3 mt-4 relative font-poppins">
-  <Carousel
-    className="w-full"
-    setApi={setPromoApi}
-    opts={{
-      loop: true,
-    }}
-  >
-    <CarouselContent>
-      {/* Banner 1 */}
-      <CarouselItem>
-        <div className="relative w-full aspect-[2/1] bg-[#F7F3ED]">
-          <a
-            href="https://grilld.com.au/oscar-piastri"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="https://images.ctfassets.net/quhz534suzyl/47hsNSwMQkzQ8S7EdQN2kN/f983410fb63f9df6cbd13d4c6656980e/Oscar_Piastri_2026_Chicken_Burger_Mobile_Hero__1_.png?w=2400"
-              alt="Oscar Piastri Burger"
-              fill
-              className="object-contain"
-              priority
-            />
-          </a>
-          {/* CTA */}
-          <a
-            href="https://grilld.com.au/oscar-piastri"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 right-4"
-          >
-            <button className="bg-[#E1251B] text-white text-xs font-medium px-4 py-2 rounded-lg shadow-sm">
-              Shop Now
-            </button>
-          </a>
-        </div>
-      </CarouselItem>
-
-      {/* Banner 2 */}
-      <CarouselItem>
-        <div className="relative w-full aspect-[2/1] bg-[#F7F3ED]">
-          <a
-            href="https://grilld.com.au/mad-bunday"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="https://images.ctfassets.net/quhz534suzyl/5EBPdiHE0tLdvkboYZIlWt/a756e8136fd9939ad54d5ebcde2c9153/madbunday-homepage-promotion-desktop-v3__1_.png?w=1984"
-              alt="Mad Bunday"
-              fill
-              className="object-contain"
-            />
-          </a>
-          {/* CTA */}
-          <a
-            href="https://grilld.com.au/mad-bunday"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 right-4"
-          >
-            <button className="bg-[#E1251B] text-white text-xs font-medium px-4 py-2 rounded-lg shadow-sm">
-              Learn More
-            </button>
-          </a>
-        </div>
-      </CarouselItem>
-
-      {/* Banner 3 */}
-      <CarouselItem>
-        <div className="relative w-full aspect-[2/1] bg-[#F7F3ED]">
-          <a
-            href="https://grilld.com.au/sustainability"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="https://images.ctfassets.net/quhz534suzyl/5vs1D2nj8Nwv6Pmo3tLuh6/8fd96e580332f49677d016bd471c9535/Local_Matters_homepage.webp?w=2400"
-              alt="Grill'd Local"
-              fill
-              className="object-contain"
-            />
-          </a>
-          {/* CTA */}
-          <a
-            href="https://grilld.com.au/local-matters"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 right-4"
-          >
-            <button className="bg-[#E1251B] text-white text-xs font-medium px-4 py-2 rounded-lg shadow-sm">
-              Learn More
-            </button>
-          </a>
-        </div>
-      </CarouselItem>
-    </CarouselContent>
-    {/* Pagination Dots */}
-    <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-10">
-      {[0, 1, 2].map((index) => (
-        <button
-          key={index}
-          onClick={() => promoApi?.scrollTo(index)}
-          className={`h-1.5 rounded-full transition-all duration-300 ${
-            currentSlide === index
-              ? "w-5 bg-[#E1251B]"
-              : "w-1.5 bg-white/70"
-          }`}
-        />
-      ))}
-    </div>
-  </Carousel>
-</div>
 
           {/* Join Relish Rewards Section */}
 <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
