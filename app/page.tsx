@@ -2122,7 +2122,7 @@ Powered by RDEP
 
         <div className="text-xs text-[#6B6475] mt-0.5">
 
-          Curated benefits for Titan Encircle members
+          Just for Titan Encircle members
 
         </div>
 
@@ -2331,194 +2331,399 @@ Powered by RDEP
 </div>
 
           {/* Receipt Actions */}
-<div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
+<div className="bg-white rounded-2xl border border-[#E6E1EE] shadow-md mx-3 mt-4 p-4">
 
+  {/* Header */}
+  <div className="flex items-center justify-between mb-4">
+
+    <div className="flex items-center">
+
+      <div className="bg-[#2E1A47] p-2.5 rounded-xl mr-3 shadow-sm">
+
+        <Receipt className="h-4 w-4 text-[#C8A96B]" />
+
+      </div>
+
+      <div>
+
+        <h3 className="text-sm font-semibold text-[#1F1B24]">
+
+          Receipt Actions
+
+        </h3>
+
+        <div className="text-[11px] text-[#6B6475] mt-0.5">
+
+          Access and manage your purchase receipt
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  {/* Actions Grid */}
   <div className="grid grid-cols-3 gap-3">
 
     {/* History */}
     <button
       ref={historyButtonRef}
       onClick={handleTransactionHistoryOpen}
-      className="flex flex-col items-center justify-center bg-gray-50 border border-gray-200 rounded-xl py-3 active:scale-[0.98]"
+      className="flex flex-col items-center justify-center bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl py-4 active:scale-[0.98] transition"
     >
-      <History className="h-5 w-5 text-[#E1251B] mb-1" />
-      <span className="text-[11px] font-medium text-gray-700">
+
+      <div className="w-10 h-10 rounded-xl bg-[#2E1A47]/10 flex items-center justify-center mb-2">
+
+        <History className="h-5 w-5 text-[#2E1A47]" />
+
+      </div>
+
+      <span className="text-[11px] font-medium text-[#1F1B24]">
+
         History
+
       </span>
+
     </button>
 
 
     {/* Email */}
     <button
       onClick={handleEmailReceipt}
-      className="flex flex-col items-center justify-center bg-gray-50 border border-gray-200 rounded-xl py-3 active:scale-[0.98]"
+      className="flex flex-col items-center justify-center bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl py-4 active:scale-[0.98] transition"
     >
-      <Mail className="h-5 w-5 text-[#E1251B] mb-1" />
-      <span className="text-[11px] font-medium text-gray-700">
+
+      <div className="w-10 h-10 rounded-xl bg-[#2E1A47]/10 flex items-center justify-center mb-2">
+
+        <Mail className="h-5 w-5 text-[#2E1A47]" />
+
+      </div>
+
+      <span className="text-[11px] font-medium text-[#1F1B24]">
+
         Email
+
       </span>
+
     </button>
 
 
     {/* Download */}
     <button
       onClick={handleDownloadReceipt}
-      className="flex flex-col items-center justify-center bg-gray-50 border border-gray-200 rounded-xl py-3 active:scale-[0.98]"
+      className="flex flex-col items-center justify-center bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl py-4 active:scale-[0.98] transition"
     >
-      <Download className="h-5 w-5 text-[#E1251B] mb-1" />
-      <span className="text-[11px] font-medium text-gray-700">
+
+      <div className="w-10 h-10 rounded-xl bg-[#2E1A47]/10 flex items-center justify-center mb-2">
+
+        <Download className="h-5 w-5 text-[#2E1A47]" />
+
+      </div>
+
+      <span className="text-[11px] font-medium text-[#1F1B24]">
+
         Download
+
       </span>
+
     </button>
 
   </div>
 
 </div>
-          
-        {/* Need Help Section */}
-<div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
+
+
+
+{/* Need Help Section */}
+<div className="bg-white rounded-2xl border border-[#E6E1EE] shadow-md mx-3 mt-4 p-4">
 
   {/* Header */}
-  <div className="flex items-center mb-3">
+  <div className="flex items-center justify-between mb-4">
 
-    <div className="bg-[#E1251B] p-2 rounded-lg mr-3">
-      <Send className="h-4 w-4 text-white" />
+    <div className="flex items-center">
+
+      {/* Icon */}
+      <div className="bg-[#2E1A47] p-2.5 rounded-xl mr-3 shadow-sm">
+
+        <Headphones className="h-4 w-4 text-[#C8A96B]" />
+
+      </div>
+
+
+      {/* Title */}
+      <div>
+
+        <h3 className="text-sm font-semibold text-[#1F1B24]">
+
+          Customer Support
+
+        </h3>
+
+        <div className="text-[11px] text-[#6B6475] mt-0.5">
+
+          Connect with Titan support anytime
+
+        </div>
+
+      </div>
+
     </div>
 
-    <h3 className="text-sm font-semibold text-gray-900">
-      Need Help?
-    </h3>
+
+    {/* Badge */}
+    <span className="text-[10px] font-semibold text-[#2E1A47] bg-[#F7F5FA] border border-[#DDD5EA] px-2 py-1 rounded-full">
+
+      24×7 HELP
+
+    </span>
 
   </div>
 
 
+  {/* Support Options */}
   <div className="grid grid-cols-3 gap-3">
 
     {/* Chat */}
     <button
       onClick={handleWhatsApp}
-      className="flex flex-col items-center justify-center bg-gray-50 border border-gray-200 rounded-xl py-3 active:scale-[0.98]"
+      className="flex flex-col items-center justify-center bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl py-4 active:scale-[0.98] transition"
     >
-      <MessageSquare className="h-5 w-5 text-[#E1251B] mb-1" />
-      <span className="text-[11px] font-medium text-gray-700">
+
+      <div className="w-10 h-10 rounded-xl bg-[#2E1A47]/10 flex items-center justify-center mb-2">
+
+        <MessageSquare className="h-5 w-5 text-[#2E1A47]" />
+
+      </div>
+
+      <span className="text-[11px] font-medium text-[#1F1B24]">
+
         Chat
+
       </span>
+
     </button>
 
 
     {/* Call */}
     <button
       onClick={handleCall}
-      className="flex flex-col items-center justify-center bg-gray-50 border border-gray-200 rounded-xl py-3 active:scale-[0.98]"
+      className="flex flex-col items-center justify-center bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl py-4 active:scale-[0.98] transition"
     >
-      <Phone className="h-5 w-5 text-[#E1251B] mb-1" />
-      <span className="text-[11px] font-medium text-gray-700">
+
+      <div className="w-10 h-10 rounded-xl bg-[#2E1A47]/10 flex items-center justify-center mb-2">
+
+        <Phone className="h-5 w-5 text-[#2E1A47]" />
+
+      </div>
+
+      <span className="text-[11px] font-medium text-[#1F1B24]">
+
         Call
+
       </span>
+
     </button>
 
 
     {/* Email */}
     <button
       onClick={handleEmail}
-      className="flex flex-col items-center justify-center bg-gray-50 border border-gray-200 rounded-xl py-3 active:scale-[0.98]"
+      className="flex flex-col items-center justify-center bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl py-4 active:scale-[0.98] transition"
     >
-      <Mail className="h-5 w-5 text-[#E1251B] mb-1" />
-      <span className="text-[11px] font-medium text-gray-700">
+
+      <div className="w-10 h-10 rounded-xl bg-[#2E1A47]/10 flex items-center justify-center mb-2">
+
+        <Mail className="h-5 w-5 text-[#2E1A47]" />
+
+      </div>
+
+      <span className="text-[11px] font-medium text-[#1F1B24]">
+
         Email
+
       </span>
+
     </button>
 
   </div>
 
 </div>
-
+          
       {/* Social Media & Store Details */}
-<div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
+<div className="bg-white rounded-2xl border border-[#E6E1EE] shadow-md mx-3 mt-4 p-4">
 
   {/* Header */}
   <div className="flex items-center mb-4">
 
-    <div className="bg-[#E1251B] p-2 rounded-lg mr-3">
-      <Share2 className="h-4 w-4 text-white" />
+    <div className="bg-[#2E1A47] p-2.5 rounded-xl mr-3 shadow-sm">
+
+      <Share2 className="h-4 w-4 text-[#C8A96B]" />
+
     </div>
 
-    <h3 className="text-sm font-semibold text-gray-900">
-      Stay Connected
-    </h3>
+    <div>
+
+      <h3 className="text-sm font-semibold text-[#1F1B24]">
+
+        Stay Connected
+
+      </h3>
+
+      <div className="text-[11px] text-[#6B6475] mt-0.5">
+
+        Follow Titan for latest launches and collections
+
+      </div>
+
+    </div>
 
   </div>
 
 
   {/* Social Links */}
-  <div className="flex justify-center space-x-6 mb-4">
+  <div className="flex justify-center space-x-6 mb-5">
 
     {/* Instagram */}
     <button
-      onClick={() => handleSocialLink("https://www.instagram.com/grilldburgers")}
+      onClick={() =>
+        handleSocialLink("https://www.instagram.com/titanwatchesindia/")
+      }
       className="flex flex-col items-center"
     >
-      <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 flex items-center justify-center mb-1">
+
+      <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 flex items-center justify-center mb-1.5 shadow-sm">
+
         <Instagram className="h-4 w-4 text-white" />
+
       </div>
-      <span className="text-[11px] font-medium text-gray-700">Instagram</span>
+
+      <span className="text-[11px] font-medium text-[#1F1B24]">
+
+        Instagram
+
+      </span>
+
     </button>
 
 
     {/* Facebook */}
     <button
-      onClick={() => handleSocialLink("https://www.facebook.com/grilldburgers")}
+      onClick={() =>
+        handleSocialLink("https://www.facebook.com/titanwatches/")
+      }
       className="flex flex-col items-center"
     >
-      <div className="w-9 h-9 rounded-full bg-[#1877F2] flex items-center justify-center mb-1">
+
+      <div className="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center mb-1.5 shadow-sm">
+
         <Facebook className="h-4 w-4 text-white" />
+
       </div>
-      <span className="text-[11px] font-medium text-gray-700">Facebook</span>
+
+      <span className="text-[11px] font-medium text-[#1F1B24]">
+
+        Facebook
+
+      </span>
+
     </button>
 
 
     {/* Website */}
     <button
-      onClick={() => handleSocialLink("https://grilld.com.au")}
+      onClick={() =>
+        handleSocialLink("https://www.titan.co.in/")
+      }
       className="flex flex-col items-center"
     >
-      <div className="w-9 h-9 rounded-full bg-[#E1251B] flex items-center justify-center mb-1">
+
+      <div className="w-10 h-10 rounded-full bg-[#2E1A47] flex items-center justify-center mb-1.5 shadow-sm">
+
         <ExternalLink className="h-4 w-4 text-white" />
+
       </div>
-      <span className="text-[11px] font-medium text-gray-700">Website</span>
+
+      <span className="text-[11px] font-medium text-[#1F1B24]">
+
+        Website
+
+      </span>
+
     </button>
 
   </div>
 
 
-  {/* Store Location */}
-  <div className="text-xs text-gray-600 text-center mb-3 bg-gray-50 p-3 rounded-xl">
+  {/* Store Details */}
+  <div className="text-xs text-[#6B6475] text-center mb-3 bg-[#F7F5FA] border border-[#E6E1EE] p-4 rounded-2xl">
 
     <button
       onClick={() => setShowStoreLocation(!showStoreLocation)}
-      className="w-full flex items-center justify-center mb-2 hover:text-[#E1251B] transition-colors"
+      className="w-full flex items-center justify-center mb-2 hover:text-[#2E1A47] transition-colors"
     >
-      <MapPin className="h-3 w-3 mr-1 text-[#E1251B]" />
-      <span className="font-semibold text-[#E1251B]">
-        Grill'd Melbourne HQ {showStoreLocation ? "▲" : "▼"}
+
+      <MapPin className="h-3.5 w-3.5 mr-1.5 text-[#C8A96B]" />
+
+      <span className="font-semibold text-[#2E1A47]">
+
+        Titan World • MG Road Bengaluru{" "}
+
+        {showStoreLocation ? "▲" : "▼"}
+
       </span>
+
     </button>
 
+
     {showStoreLocation && (
-      <div className="space-y-0.5">
-        <p className="font-semibold text-gray-900">Grill'd Healthy Burgers</p>
-        <p>Level 2, 2 Russell Street</p>
-        <p>Melbourne VIC 3000</p>
-        <p>Australia</p>
 
-        <p className="mt-2 text-[10px]">
-          ABN: 31 093 142 806
+      <div className="space-y-1 leading-relaxed">
+
+        <p className="font-semibold text-[#1F1B24]">
+
+          Titan World - MG Road Bangalore
+
         </p>
 
-        <p className="mt-1 text-[#E1251B] font-semibold">
-          Manager on Duty: {currentReceipt.associate}
+        <p>
+          Shop No. 77 & 78, Mahatma Gandhi Road
         </p>
+
+        <p>
+          Beside Deccan Herald, Haridevpur
+        </p>
+
+        <p>
+          Shanthala Nagar, Shivaji Nagar
+        </p>
+
+        <p>
+          Bengaluru, Karnataka 560001
+        </p>
+
+        <p className="mt-3 text-[10px]">
+
+          Titan Company Limited
+
+        </p>
+
+        <p className="text-[10px]">
+
+          CIN: L74999TN1984PLC010856
+
+        </p>
+
+        <p className="mt-2 text-[#2E1A47] font-semibold">
+
+          Store Associate: {currentReceipt.associate}
+
+        </p>
+
       </div>
+
     )}
 
   </div>
@@ -2526,51 +2731,76 @@ Powered by RDEP
 
   {/* Terms */}
   <button
-    className="w-full text-xs text-gray-500 hover:text-[#E1251B] h-6 font-medium"
+    className="w-full text-xs text-[#6B6475] hover:text-[#2E1A47] h-6 font-medium transition-colors"
     onClick={() => setShowTerms(!showTerms)}
   >
+
     Terms & Conditions {showTerms ? "▲" : "▼"}
+
   </button>
 
-  {showTerms && (
-    <div className="text-[11px] text-gray-500 mt-2 space-y-1 px-2 font-medium">
 
-      <p>• Relish rewards points are subject to program terms and availability.</p>
-      <p>• Promotions and coupons may vary by location and time.</p>
-      <p>• Prices include applicable Australian GST.</p>
-      <p>• For support visit grilld.com.au/contact.</p>
+  {showTerms && (
+
+    <div className="text-[11px] text-[#6B6475] mt-3 space-y-2 px-2 leading-relaxed">
+
+      <p>
+        • Titan Encircle membership benefits are subject to program terms and eligibility.
+      </p>
+
+      <p>
+        • Personalized offers may vary based on membership tier and purchase history.
+      </p>
+
+      <p>
+        • Prices displayed are inclusive of applicable GST.
+      </p>
+
+      <p>
+        • Warranty coverage varies by product category and model.
+      </p>
+
+      <p>
+        • For support visit titan.co.in or contact Titan Customer Care.
+      </p>
 
     </div>
+
   )}
 
 
   {/* Powered by RDEP */}
-<div className="text-center mt-3 pt-3 border-t border-gray-100">
+  <div className="text-center mt-4 pt-4 border-t border-[#F0EDF5]">
 
-  <div className="flex items-center justify-center space-x-1">
+    <div className="flex items-center justify-center space-x-1.5">
 
-    <span className="text-xs text-gray-400 font-medium">
-      Powered by
-    </span>
+      <span className="text-xs text-[#9B94A8] font-medium">
 
-    <a
-      href="https://www.rdep.io"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center"
-    >
-      <Image
-        src="/images/design-mode/RDEP%20cropped.png"
-        alt="RDEP"
-        width={60}
-        height={16}
-        className="object-contain"
-      />
-    </a>
+        Powered by
+
+      </span>
+
+      <a
+        href="https://www.rdep.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center"
+      >
+
+        <Image
+          src="/images/design-mode/RDEP%20cropped.png"
+          alt="RDEP"
+          width={60}
+          height={16}
+          className="object-contain"
+        />
+
+      </a>
+
+    </div>
 
   </div>
 
-</div>
 </div>
           <div id="height-marker" style={{ height: "1px" }} />
         </div>
