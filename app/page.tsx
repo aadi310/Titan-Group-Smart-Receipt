@@ -1311,14 +1311,14 @@ Powered by RDEP
       {/* Banner 1 */}
       <CarouselItem>
 
-        <div className="relative w-full aspect-[3/1] bg-[#1E102E] overflow-hidden">
+        <a
+          href="https://www.titan.co.in/shop/titan-sale?lang=en_IN"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full"
+        >
 
-          <a
-            href="https://www.titan.co.in/shop/titan-sale?lang=en_IN"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full h-full"
-          >
+          <div className="relative w-full aspect-[3/1] bg-[#1E102E] overflow-hidden">
 
             <img
               src="/images/design-mode/titan-banner-1.webp"
@@ -1326,30 +1326,9 @@ Powered by RDEP
               className="w-full h-full object-cover"
             />
 
-          </a>
+          </div>
 
-
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-transparent pointer-events-none" />
-
-
-          {/* CTA */}
-          <a
-            href="https://www.titan.co.in/shop/titan-sale?lang=en_IN"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 right-4 z-10"
-          >
-
-            <button className="bg-[#2E1A47] text-white text-xs font-medium px-4 py-2 rounded-xl shadow-sm border border-white/10 hover:opacity-95 transition">
-
-              Shop Sale
-
-            </button>
-
-          </a>
-
-        </div>
+        </a>
 
       </CarouselItem>
 
@@ -1357,14 +1336,14 @@ Powered by RDEP
       {/* Banner 2 */}
       <CarouselItem>
 
-        <div className="relative w-full aspect-[3/1] bg-[#1E102E] overflow-hidden">
+        <a
+          href="https://www.titan.co.in/divers-clp.html?lang=en_IN"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full"
+        >
 
-          <a
-            href="https://www.titan.co.in/divers-clp.html?lang=en_IN"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full h-full"
-          >
+          <div className="relative w-full aspect-[3/1] bg-[#1E102E] overflow-hidden">
 
             <img
               src="/images/design-mode/titan-banner-2.webp"
@@ -1372,30 +1351,9 @@ Powered by RDEP
               className="w-full h-full object-cover"
             />
 
-          </a>
+          </div>
 
-
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-transparent pointer-events-none" />
-
-
-          {/* CTA */}
-          <a
-            href="https://www.titan.co.in/divers-clp.html?lang=en_IN"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 right-4 z-10"
-          >
-
-            <button className="bg-[#2E1A47] text-white text-xs font-medium px-4 py-2 rounded-xl shadow-sm border border-white/10 hover:opacity-95 transition">
-
-              Explore Collection
-
-            </button>
-
-          </a>
-
-        </div>
+        </a>
 
       </CarouselItem>
 
@@ -1403,14 +1361,14 @@ Powered by RDEP
       {/* Banner 3 */}
       <CarouselItem>
 
-        <div className="relative w-full aspect-[3/1] bg-[#1E102E] overflow-hidden">
+        <a
+          href="https://www.titan.co.in/shop/raga-watches-on-sale?lang=en_IN"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full"
+        >
 
-          <a
-            href="https://www.titan.co.in/shop/raga-watches-on-sale?lang=en_IN"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full h-full"
-          >
+          <div className="relative w-full aspect-[3/1] bg-[#1E102E] overflow-hidden">
 
             <img
               src="/images/design-mode/titan-banner-3.webp"
@@ -1418,30 +1376,9 @@ Powered by RDEP
               className="w-full h-full object-cover"
             />
 
-          </a>
+          </div>
 
-
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-transparent pointer-events-none" />
-
-
-          {/* CTA */}
-          <a
-            href="https://www.titan.co.in/shop/raga-watches-on-sale?lang=en_IN"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 right-4 z-10"
-          >
-
-            <button className="bg-[#2E1A47] text-white text-xs font-medium px-4 py-2 rounded-xl shadow-sm border border-white/10 hover:opacity-95 transition">
-
-              Discover Raga
-
-            </button>
-
-          </a>
-
-        </div>
+        </a>
 
       </CarouselItem>
 
