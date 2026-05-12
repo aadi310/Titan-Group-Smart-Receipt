@@ -1297,92 +1297,266 @@ Powered by RDEP
 </div>
 
           {/* Rewards Loyalty Section */}
-<div className="bg-white rounded-2xl shadow-md border border-gray-200 mt-4 mx-3 overflow-hidden">
+<div className="bg-white rounded-2xl shadow-md border border-[#E6E1EE] mt-4 mx-3 overflow-hidden">
+
   {/* Banner */}
   <div className="relative">
+
     <img
-      src="https://images.ctfassets.net/quhz534suzyl/5BqKM8VXH1J4vMu31YHJvu/03ccdda31159afe6c39c3279b406134c/Dine_in_group_Image__1_.png?w=1984"
-      alt="Grill'd Relish Rewards"
-      className="w-full h-36 object-cover"
+      src="/images/design-mode/titan-sbi-1400.jpg"
+      alt="Titan Encircle"
+      className="w-full h-40 object-cover"
     />
-    {/* Gradient overlay for readability */}
-    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-    {/* Text */}
+
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-[#1E102E]/90 via-[#1E102E]/40 to-transparent" />
+
+    {/* Text Content */}
     <div className="absolute bottom-4 left-4 right-4 text-white">
-      <div className="text-lg font-semibold leading-tight">
-        Relish Rewards
+
+      <div className="flex items-center gap-2 mb-2">
+
+        <div className="bg-white/15 backdrop-blur-sm border border-white/10 rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em]">
+
+          Titan Loyalty
+
+        </div>
+
       </div>
-      <div className="text-xs opacity-90">
-        Earn rewards every time you Grill'd
+
+      <div className="text-2xl font-semibold leading-tight">
+        Titan Encircle
       </div>
+
+      <div className="text-sm text-white/80 mt-1 max-w-[280px] leading-relaxed">
+        One membership across Titan, Fastrack, Tanishq, Helios and more.
+      </div>
+
     </div>
+
   </div>
+
+
   <div className="p-4">
+
     {/* Points Overview */}
     <div className="grid grid-cols-3 gap-3 mb-4">
-      <div className="bg-[#F7F3ED] rounded-xl p-3 text-center border border-[#ECE7DF]">
-        <div className="text-lg font-semibold text-[#E1251B]">+120</div>
-        <div className="text-xs text-gray-600">Earned Today</div>
+
+      <div className="bg-[#F7F5FA] rounded-2xl p-3 text-center border border-[#E6E1EE]">
+
+        <div className="text-xl font-semibold text-[#2E1A47]">
+          +780
+        </div>
+
+        <div className="text-[11px] text-[#6B6475] mt-1">
+          Earned Today
+        </div>
+
       </div>
-      <div className="bg-[#F7F3ED] rounded-xl p-3 text-center border border-[#ECE7DF]">
-        <div className="text-lg font-semibold text-[#E1251B]">2,450</div>
-        <div className="text-xs text-gray-600">Relish Points</div>
+
+
+      <div className="bg-[#F7F5FA] rounded-2xl p-3 text-center border border-[#E6E1EE]">
+
+        <div className="text-xl font-semibold text-[#2E1A47]">
+          12,450
+        </div>
+
+        <div className="text-[11px] text-[#6B6475] mt-1">
+          Encircle Points
+        </div>
+
       </div>
-      <div className="bg-[#F7F3ED] rounded-xl p-3 text-center border border-[#ECE7DF]">
-        <div className="text-lg font-semibold text-[#E1251B]">Burger</div>
-        <div className="text-xs text-gray-600">Next Reward</div>
+
+
+      <div className="bg-[#F7F5FA] rounded-2xl p-3 text-center border border-[#E6E1EE]">
+
+        <div className="text-lg font-semibold text-[#2E1A47]">
+          Gold
+        </div>
+
+        <div className="text-[11px] text-[#6B6475] mt-1">
+          Current Tier
+        </div>
+
       </div>
+
     </div>
+
+
     {/* Progress */}
-    <div className="bg-[#F7F3ED] rounded-xl p-4 border border-[#ECE7DF]">
-      <div className="flex justify-between text-xs text-gray-600 mb-2">
-        <span>Reward Progress</span>
-        <span>650 / 1000 pts</span>
+    <div className="bg-[#F7F5FA] rounded-2xl p-4 border border-[#E6E1EE]">
+
+      <div className="flex justify-between text-xs text-[#6B6475] mb-2">
+
+        <span>
+          Tier Progress
+        </span>
+
+        <span>
+          12,450 / 15,000 pts
+        </span>
+
       </div>
-      <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+
+
+      <div className="w-full h-3 bg-[#DDD5EA] rounded-full overflow-hidden">
+
         <div
-          className="h-full bg-[#E1251B] rounded-full"
-          style={{ width: "65%" }}
+          className="h-full bg-gradient-to-r from-[#C8A96B] to-[#A3844E] rounded-full"
+          style={{ width: "83%" }}
         />
+
       </div>
-      <div className="text-xs text-gray-600 mt-2">
-        Only <span className="font-semibold text-[#E1251B]">350 points</span> away from your next reward.
+
+
+      <div className="text-xs text-[#6B6475] mt-3 leading-relaxed">
+
+        Only{" "}
+
+        <span className="font-semibold text-[#2E1A47]">
+          2,550 points
+        </span>
+
+        {" "}away from unlocking Platinum privileges and exclusive partner rewards.
+
       </div>
+
     </div>
+
+
     {/* Reward Journey */}
-    <div className="mt-4">
-      <div className="text-sm font-semibold text-gray-900 mb-2">
-        Your Reward Journey
+    <div className="mt-5">
+
+      <div className="text-sm font-semibold text-[#1F1B24] mb-3">
+
+        Your Encircle Journey
+
       </div>
-      <div className="flex items-center justify-between text-center text-xs">
+
+
+      <div className="flex items-center justify-between text-center text-[11px]">
+
+        {/* Silver */}
         <div className="flex flex-col items-center">
-          <div className="w-8 h-8 rounded-full bg-[#E1251B] text-white flex items-center justify-center">✓</div>
-          <div className="mt-1">Fries</div>
+
+          <div className="w-9 h-9 rounded-full bg-[#2E1A47] text-white flex items-center justify-center font-semibold">
+            ✓
+          </div>
+
+          <div className="mt-2 text-[#6B6475]">
+            Silver
+          </div>
+
         </div>
-        <div className="flex-1 h-[2px] bg-gray-200 mx-2"></div>
+
+
+        <div className="flex-1 h-[2px] bg-[#DDD5EA] mx-2" />
+
+
+        {/* Gold */}
         <div className="flex flex-col items-center">
-          <div className="w-8 h-8 rounded-full bg-[#E1251B] text-white flex items-center justify-center">✓</div>
-          <div className="mt-1">Drink</div>
+
+          <div className="w-9 h-9 rounded-full bg-[#C8A96B] text-white flex items-center justify-center font-semibold">
+            ✓
+          </div>
+
+          <div className="mt-2 text-[#6B6475]">
+            Gold
+          </div>
+
         </div>
-        <div className="flex-1 h-[2px] bg-gray-200 mx-2"></div>
+
+
+        <div className="flex-1 h-[2px] bg-[#DDD5EA] mx-2" />
+
+
+        {/* Platinum */}
         <div className="flex flex-col items-center">
-          <div className="w-8 h-8 rounded-full border-2 border-[#E1251B] text-[#E1251B] flex items-center justify-center">🍔</div>
-          <div className="mt-1">Burger</div>
+
+          <div className="w-9 h-9 rounded-full border-2 border-[#2E1A47] text-[#2E1A47] flex items-center justify-center font-semibold">
+
+            ★
+
+          </div>
+
+          <div className="mt-2 text-[#6B6475]">
+            Platinum
+          </div>
+
         </div>
+
       </div>
+
     </div>
+
+
+    {/* Benefits */}
+    <div className="mt-5 bg-[#F7F5FA] rounded-2xl border border-[#E6E1EE] p-4">
+
+      <div className="text-sm font-semibold text-[#1F1B24] mb-3">
+
+        Member Benefits
+
+      </div>
+
+
+      <div className="space-y-2 text-xs text-[#6B6475]">
+
+        <div className="flex items-start gap-2">
+
+          <div className="w-1.5 h-1.5 rounded-full bg-[#C8A96B] mt-1.5" />
+
+          <span>
+            Earn points across Titan, Fastrack, Helios, Tanishq & partner brands
+          </span>
+
+        </div>
+
+
+        <div className="flex items-start gap-2">
+
+          <div className="w-1.5 h-1.5 rounded-full bg-[#C8A96B] mt-1.5" />
+
+          <span>
+            Unlock exclusive shopping offers and concierge experiences
+          </span>
+
+        </div>
+
+
+        <div className="flex items-start gap-2">
+
+          <div className="w-1.5 h-1.5 rounded-full bg-[#C8A96B] mt-1.5" />
+
+          <span>
+            Refer friends and earn bonus rewards on successful referrals
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
     {/* CTA */}
-    <div className="mt-4">
+    <div className="mt-5">
+
       <a
-        href="https://grilld.com.au/relish"
+        href="https://www.titanencircle.com/"
         target="_blank"
         rel="noopener noreferrer"
-        className="block w-full text-center bg-[#E1251B] text-white rounded-xl py-2 text-sm font-medium hover:opacity-90 transition"
+        className="block w-full text-center bg-[#2E1A47] text-white rounded-2xl py-3 text-sm font-medium hover:opacity-95 transition"
       >
-        View Relish Rewards
+
+        Explore Titan Encircle
+
       </a>
+
     </div>
+
   </div>
+
 </div>
           
 {/* Promo Banner Carousel */}
