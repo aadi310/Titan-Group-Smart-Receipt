@@ -1300,38 +1300,37 @@ Powered by RDEP
 <div className="bg-white rounded-2xl shadow-md border border-[#E6E1EE] mt-4 mx-3 overflow-hidden">
 
   {/* Banner */}
-  <div className="relative">
+<div className="relative bg-[#1E102E]">
 
-    <img
-      src="/images/design-mode/Titan-sbi-1400.jpg"
-      alt="Titan Encircle"
-      className="w-full h-40 object-cover"
-    />
+  <img
+    src="/images/design-mode/Titan-sbi-1400.jpg"
+    alt="Titan Encircle"
+    className="w-full h-auto object-contain"
+  />
 
-    {/* Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-t from-[#1E102E]/90 via-[#1E102E]/40 to-transparent" />
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-t from-[#1E102E]/90 via-[#1E102E]/30 to-transparent" />
 
-    {/* Text Content */}
-    <div className="absolute bottom-4 left-4 right-4 text-white">
+  {/* Text Content */}
+  <div className="absolute bottom-4 left-4 right-4 text-white">
 
-      <div className="flex items-center gap-2 mb-2">
+    <div className="flex items-center gap-2 mb-2">
 
-        <div className="bg-white/15 backdrop-blur-sm border border-white/10 rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em]">
+      <div className="bg-white/15 backdrop-blur-sm border border-white/10 rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em]">
 
-          Titan Loyalty
+        Titan Loyalty
 
-        </div>
-
-      </div>
-
-      <div className="text-2xl font-semibold leading-tight">
-        Titan Encircle
       </div>
 
     </div>
 
+    <div className="text-2xl font-semibold leading-tight">
+      Titan Encircle
+    </div>
+
   </div>
 
+</div>
 
   <div className="p-4">
 
