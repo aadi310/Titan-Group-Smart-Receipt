@@ -207,7 +207,7 @@ const [expandedItemFeedback, setExpandedItemFeedback] = useState([])
     date: "05-03-2026",
     time: "19:22:18",
     associate: "Rohan Mehta",
-    branch: "Titan World - Connaught Place",
+    branch: "Titan World - MG Road Bangalore",
     items: [
       {
         id: 0,
@@ -470,7 +470,7 @@ const transactionHistory = [
   }
 
   const handleEmailReceipt = () => {
-    window.open(`mailto:?subject=Receipt from Grill'd Melbourne&body=Receipt ID: ${currentReceipt.id}`)
+    window.open(`mailto:?subject=Receipt from Titan&body=Receipt ID: ${currentReceipt.id}`)
   }
 
   const handleDownloadReceipt = () => {
@@ -479,7 +479,7 @@ const transactionHistory = [
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Grill'd Digital Receipt</title>
+<title>Titan Digital Receipt</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -494,7 +494,7 @@ box-sizing:border-box;
 body{
 font-family:'Poppins',sans-serif;
 font-size:14px;
-color:#111;
+color:#1F1B24;
 background:#fff;
 width:800px;
 margin:0 auto;
@@ -508,21 +508,22 @@ display:flex;
 justify-content:space-between;
 align-items:flex-start;
 margin-bottom:28px;
-padding-bottom:16px;
-border-bottom:3px solid #E1251B;
+padding-bottom:18px;
+border-bottom:3px solid #2E1A47;
 }
 
 .company-info h1{
-font-size:30px;
-color:#E1251B;
+font-size:32px;
+color:#2E1A47;
 font-weight:700;
-margin-bottom:4px;
+margin-bottom:6px;
+letter-spacing:0.5px;
 }
 
 .company-info p{
 font-size:12px;
 color:#555;
-line-height:1.4;
+line-height:1.5;
 }
 
 .bill-info{
@@ -531,34 +532,35 @@ font-size:12px;
 }
 
 .bill-info div{
-margin-bottom:4px;
+margin-bottom:5px;
 }
 
 .bill-id{
-font-weight:600;
-color:#E1251B;
+font-weight:700;
+color:#2E1A47;
 }
 
-/* Guest section */
+/* Customer Section */
 
 .customer-section{
-background:#F7F3ED;
-padding:14px;
-border-left:4px solid #E1251B;
-border-radius:0 8px 8px 0;
-margin-bottom:22px;
+background:#F7F5FA;
+padding:16px;
+border-left:4px solid #C8A96B;
+border-radius:0 10px 10px 0;
+margin-bottom:24px;
 }
 
 .customer-section h3{
-font-size:15px;
-color:#E1251B;
+font-size:16px;
+color:#2E1A47;
 font-weight:600;
-margin-bottom:2px;
+margin-bottom:4px;
 }
 
 .customer-section p{
 font-size:12px;
 color:#666;
+line-height:1.5;
 }
 
 /* Table */
@@ -566,13 +568,13 @@ color:#666;
 .items-table{
 width:100%;
 border-collapse:collapse;
-margin-bottom:24px;
+margin-bottom:26px;
 }
 
 .items-table th{
-background:#E1251B;
+background:#2E1A47;
 color:white;
-padding:10px 8px;
+padding:12px 10px;
 text-align:left;
 font-size:11px;
 text-transform:uppercase;
@@ -580,27 +582,30 @@ letter-spacing:0.5px;
 }
 
 .items-table td{
-padding:12px 8px;
-border-bottom:1px solid #eee;
+padding:14px 10px;
+border-bottom:1px solid #EEE8F5;
 font-size:12px;
 vertical-align:top;
 }
 
 .item-name{
 font-weight:600;
-margin-bottom:3px;
+margin-bottom:4px;
+color:#1F1B24;
 }
 
 .item-desc{
 font-size:11px;
 color:#666;
+line-height:1.5;
 }
 
 .item-specs{
 font-size:10px;
-color:#E1251B;
-margin-top:4px;
+color:#2E1A47;
+margin-top:6px;
 font-weight:600;
+line-height:1.5;
 }
 
 /* Totals */
@@ -608,30 +613,62 @@ font-weight:600;
 .totals-section{
 display:flex;
 justify-content:space-between;
-margin-bottom:20px;
+margin-bottom:22px;
 }
 
 .items-count{
 font-weight:600;
+color:#2E1A47;
 }
 
 .totals-table{
 text-align:right;
-min-width:200px;
+min-width:220px;
 }
 
 .totals-table div{
-margin-bottom:6px;
+margin-bottom:8px;
 font-size:13px;
 }
 
 .net-total{
-font-size:18px;
+font-size:20px;
 font-weight:700;
-color:#E1251B;
-border-top:2px solid #E1251B;
-padding-top:6px;
-margin-top:6px;
+color:#2E1A47;
+border-top:2px solid #2E1A47;
+padding-top:8px;
+margin-top:8px;
+}
+
+/* Payment Box */
+
+.payment-box{
+background:#F7F5FA;
+border:1px solid #E6E1EE;
+border-radius:12px;
+padding:14px;
+margin-bottom:24px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.payment-title{
+font-size:12px;
+font-weight:600;
+color:#2E1A47;
+margin-bottom:3px;
+}
+
+.payment-sub{
+font-size:11px;
+color:#666;
+}
+
+.payment-amount{
+font-size:16px;
+font-weight:700;
+color:#2E1A47;
 }
 
 /* Footer */
@@ -640,17 +677,17 @@ margin-top:6px;
 text-align:center;
 margin-top:30px;
 padding-top:20px;
-border-top:1px dashed #ccc;
+border-top:1px dashed #D8D1E3;
 font-size:12px;
 color:#555;
 }
 
 .footer strong{
-color:#E1251B;
+color:#2E1A47;
 }
 
 .powered{
-margin-top:10px;
+margin-top:12px;
 font-size:10px;
 color:#999;
 font-weight:600;
@@ -672,99 +709,229 @@ padding:0;
 <div class="receipt-header">
 
 <div class="company-info">
-<h1>Grill'd</h1>
+
+<h1>TITAN</h1>
+
 <p>
-<strong>Grill'd Healthy Burgers</strong><br>
-Level 2, 2 Russell Street<br>
-Melbourne VIC 3000, Australia<br>
-Phone: +61 3 9975 5975
+<strong>Titan World - MG Road Bangalore</strong><br>
+Shop No, 77 & 78, Mahatma Gandhi Rd,<br>
+beside Deccan Herald, Haridevpur,<br>
+Bengaluru, Karnataka 560001,<br>
+Phone: +91 11 4567 8901
 </p>
+
 </div>
 
 <div class="bill-info">
-<div><strong>Receipt ID:</strong> <span class="bill-id">GRILLD-FLINDERS-98347219</span></div>
-<div><strong>Date:</strong> 05-03-2026 19:22</div>
-<div><strong>Team Member:</strong> Liam O’Connor</div>
+
+<div>
+<strong>Receipt ID:</strong>
+<span class="bill-id">TITINDDEL78452</span>
+</div>
+
+<div>
+<strong>Date:</strong>
+05-03-2026 19:22
+</div>
+
+<div>
+<strong>Store Associate:</strong>
+Rohan Mehta
 </div>
 
 </div>
+
+</div>
+
 
 <div class="customer-section">
-<h3>Guest: ${customerName}</h3>
-<p>Thanks for enjoying healthy burgers with us!</p>
+
+<h3>Customer: ${customerName}</h3>
+
+<p>
+Thank you for shopping with Titan. Your purchase is covered under Titan warranty and eligible for Titan Encircle rewards benefits.
+</p>
+
 </div>
+
 
 <table class="items-table">
 
 <thead>
+
 <tr>
-<th style="width:50%">Menu Item</th>
+<th style="width:48%">Product</th>
 <th style="width:10%">Qty</th>
-<th style="width:15%">Size</th>
-<th style="width:12%">Price</th>
+<th style="width:16%">Category</th>
+<th style="width:13%">Price</th>
 <th style="width:13%">Total</th>
 </tr>
+
 </thead>
 
 <tbody>
 
 <tr>
+
 <td>
-<div class="item-name">Simon Says Burger</div>
-<div class="item-desc">Grass-fed beef, cheese, lettuce, tomato, pickles & herb mayo</div>
-<div class="item-specs">Type: Beef Burger</div>
+
+<div class="item-name">
+Titan Celestor 2.0 Smartwatch
+</div>
+
+<div class="item-desc">
+Premium smartwatch with fitness tracking, AMOLED display & Bluetooth calling
+</div>
+
+<div class="item-specs">
+SKU: 90248AP02C<br>
+Strap: Silicone & Nylon • Blue<br>
+Warranty: 12 Months
+</div>
+
 </td>
+
 <td>1</td>
-<td>Regular</td>
-<td>$14.90</td>
-<td><strong>$14.90</strong></td>
+
+<td>Smartwatch</td>
+
+<td>₹10,350</td>
+
+<td>
+<strong>₹10,350</strong>
+</td>
+
 </tr>
 
-<tr>
-<td>
-<div class="item-name">Sweet Potato Fries</div>
-<div class="item-desc">Crispy sweet potato fries served with chipotle mayo</div>
-<div class="item-specs">Side</div>
-</td>
-<td>1</td>
-<td>Regular</td>
-<td>$6.90</td>
-<td><strong>$6.90</strong></td>
-</tr>
 
 <tr>
+
 <td>
-<div class="item-name">Blood Orange Soda</div>
-<div class="item-desc">House soda with natural blood orange flavour</div>
-<div class="item-specs">Drink</div>
+
+<div class="item-name">
+Titan Minimals Quartz Analog Watch
+</div>
+
+<div class="item-desc">
+Minimal black dial analog watch with premium metallic finish
+</div>
+
+<div class="item-specs">
+SKU: NU1806NM01<br>
+Strap: Metal • Black<br>
+Warranty: 24 Months
+</div>
+
 </td>
+
 <td>1</td>
-<td>Regular</td>
-<td>$4.50</td>
-<td><strong>$4.50</strong></td>
+
+<td>Analog</td>
+
+<td>₹3,595</td>
+
+<td>
+<strong>₹3,595</strong>
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+<div class="item-name">
+Titan Men's Timeless Charm
+</div>
+
+<div class="item-desc">
+Classic leather strap watch designed for everyday elegance
+</div>
+
+<div class="item-specs">
+SKU: NL1729SL02<br>
+Strap: Leather • Brown<br>
+Warranty: 24 Months
+</div>
+
+</td>
+
+<td>1</td>
+
+<td>Leather</td>
+
+<td>₹1,795</td>
+
+<td>
+<strong>₹1,795</strong>
+</td>
+
 </tr>
 
 </tbody>
+
 </table>
+
 
 <div class="totals-section">
 
 <div class="items-count">
-Items Ordered: 3
+Items Purchased: 3
 </div>
 
 <div class="totals-table">
-<div>Subtotal: <strong>$23.91</strong></div>
-<div>GST (10%): <strong>$2.39</strong></div>
-<div class="net-total">Total: <strong>$26.30</strong></div>
+
+<div>
+Subtotal:
+<strong>₹13,339.00</strong>
+</div>
+
+<div>
+GST:
+<strong>₹2,401.01</strong>
+</div>
+
+<div class="net-total">
+Total:
+<strong>₹15,740.00</strong>
 </div>
 
 </div>
+
+</div>
+
+
+<div class="payment-box">
+
+<div>
+
+<div class="payment-title">
+Card Payment
+</div>
+
+<div class="payment-sub">
+Visa •••• 4532
+</div>
+
+</div>
+
+<div class="payment-amount">
+₹15,740.00
+</div>
+
+</div>
+
 
 <div class="footer">
 
-<p><strong>Thanks for choosing Grill'd!</strong></p>
-<p>Follow us on Instagram @grilldburgers or visit grilld.com.au</p>
+<p>
+<strong>Thank you for choosing Titan!</strong>
+</p>
+
+<p>
+Visit titan.co.in or follow @titanwatchesindia for latest collections and launches.
+</p>
 
 <div class="powered">
 Powered by RDEP
@@ -773,14 +940,13 @@ Powered by RDEP
 </div>
 
 </body>
-</html>
-    `
+</html>    `
 
     const blob = new Blob([receiptContent], { type: "text/html" })
     const url = URL.createObjectURL(blob)
     const link = document.createElement("a")
     link.href = url
-    link.download = "Grilld_Receipt_SK251107001.html"
+    link.download = "Titan_Receipt_SK251107001.html"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -2894,43 +3060,73 @@ Powered by RDEP
 
         {/* Transaction History Modal */}
 {showTransactionHistory && (
+
   <div className="fixed inset-0 z-[9999] flex items-center justify-center">
 
     {/* Backdrop */}
     <div
-      className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+      className="absolute inset-0 bg-black/50 backdrop-blur-sm"
       onClick={() => setShowTransactionHistory(false)}
     />
 
+
     {/* Modal */}
-    <div className="relative bg-white rounded-2xl w-full max-w-sm mx-4 shadow-2xl border border-gray-200 font-poppins overflow-hidden">
+    <div className="relative bg-white rounded-3xl w-full max-w-sm mx-4 shadow-2xl border border-[#E6E1EE] overflow-hidden">
 
       {/* Header */}
-      <div className="flex justify-between items-center p-4 border-b border-gray-100">
+      <div className="flex justify-between items-center p-5 border-b border-[#F0EDF5] bg-[#F7F5FA]">
 
         <div className="flex items-center">
 
-          <div className="bg-[#E1251B] p-2 rounded-lg mr-3">
-            <History className="h-4 w-4 text-white" />
+          {/* Icon */}
+          <div className="bg-[#2E1A47] p-2.5 rounded-xl mr-3 shadow-sm">
+
+            <History className="h-4 w-4 text-[#C8A96B]" />
+
           </div>
 
-          <h3 className="text-sm font-semibold text-gray-900">
-            Order History
-          </h3>
+
+          {/* Title */}
+          <div>
+
+            <h3 className="text-sm font-semibold text-[#1F1B24]">
+
+              Purchase History
+
+            </h3>
+
+            <div className="text-[11px] text-[#6B6475] mt-0.5">
+
+              Your recent Titan purchases
+
+            </div>
+
+          </div>
 
         </div>
 
+
+        {/* Close */}
         <button
-          className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100"
+          className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-white transition"
           onClick={() => setShowTransactionHistory(false)}
         >
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            className="h-4 w-4 text-gray-500"
+            className="h-4 w-4 text-[#6B6475]"
           >
-            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2"/>
+
+            <path
+              d="M18 6L6 18M6 6l12 12"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+
           </svg>
+
         </button>
 
       </div>
@@ -2946,29 +3142,45 @@ Powered by RDEP
             onClick={() => {
               setCurrentReceiptId(transaction.id)
               setShowTransactionHistory(false)
-              window.scrollTo({ top: 0, behavior: "smooth" })
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              })
             }}
-            className="w-full flex items-center p-3 bg-gray-50 border border-gray-200 rounded-xl hover:border-[#E1251B] transition"
+            className="w-full flex items-center p-4 bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl hover:border-[#2E1A47] transition-all active:scale-[0.99]"
           >
 
-            <div className="bg-white border border-gray-200 p-2 rounded-lg mr-3">
-              <FileText className="h-4 w-4 text-[#E1251B]" />
+            {/* Icon */}
+            <div className="bg-white border border-[#E6E1EE] p-2.5 rounded-xl mr-3 shadow-sm">
+
+              <FileText className="h-4 w-4 text-[#2E1A47]" />
+
             </div>
 
+
+            {/* Content */}
             <div className="flex-grow text-left">
 
-              <div className="text-sm font-semibold text-gray-900">
-                Grill'd
+              <div className="text-sm font-semibold text-[#1F1B24]">
+
+                Titan World
+
               </div>
 
-              <div className="text-[11px] text-gray-500">
+              <div className="text-[11px] text-[#6B6475] mt-0.5">
+
                 {transaction.date}
+
               </div>
 
             </div>
 
-            <div className="text-sm font-semibold text-[#E1251B]">
-              ${transaction.amount.toFixed(2)}
+
+            {/* Amount */}
+            <div className="text-sm font-semibold text-[#2E1A47]">
+
+              ₹{transaction.amount.toLocaleString("en-IN")}
+
             </div>
 
           </button>
@@ -2977,10 +3189,28 @@ Powered by RDEP
 
       </div>
 
+
+      {/* Footer */}
+      <div className="px-4 pb-4 pt-1">
+
+        <div className="bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl p-3 text-center">
+
+          <div className="text-[11px] text-[#6B6475] leading-relaxed">
+
+            Purchases made across Titan World and participating stores may appear here.
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
   </div>
+
 )}
+        
         {/* Refer & Earn Modal */}
         {showReferModal && (
           <div
