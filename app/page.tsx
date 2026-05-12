@@ -2094,27 +2094,47 @@ Powered by RDEP
 
 </div>
           
-          {/* Just For You - Coupon Section */}
-{/* Just For You - Coupon Section */}
-<div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
+         {/* Personalized Offers Section */}
+<div className="bg-white rounded-2xl border border-[#E6E1EE] shadow-md mx-3 mt-4 p-4">
 
   {/* Header */}
   <div className="flex items-center justify-between mb-4">
 
     <div className="flex items-center">
 
-      <div className="bg-[#E1251B] p-2 rounded-lg mr-3">
-        <Sparkles className="h-4 w-4 text-white" />
+      {/* Icon */}
+      <div className="bg-[#2E1A47] p-2.5 rounded-xl mr-3 shadow-sm">
+
+        <Sparkles className="h-4 w-4 text-[#C8A96B]" />
+
       </div>
 
-      <h3 className="text-base font-semibold text-gray-900">
-        Just for You
-      </h3>
+
+      {/* Title */}
+      <div>
+
+        <h3 className="text-base font-semibold text-[#1F1B24]">
+
+          Personalized Offers
+
+        </h3>
+
+        <div className="text-xs text-[#6B6475] mt-0.5">
+
+          Curated benefits for Titan Encircle members
+
+        </div>
+
+      </div>
 
     </div>
 
-    <span className="text-[10px] font-semibold text-[#E1251B] bg-red-50 px-2 py-1 rounded">
-      COUPONS
+
+    {/* Badge */}
+    <span className="text-[10px] font-semibold text-[#2E1A47] bg-[#F7F5FA] border border-[#DDD5EA] px-2.5 py-1 rounded-full">
+
+      EXCLUSIVE
+
     </span>
 
   </div>
@@ -2122,83 +2142,160 @@ Powered by RDEP
 
   {/* Inline Toast */}
   {couponToast && (
-    <div className="mb-3 text-center text-xs text-green-700 bg-green-50 border border-green-100 rounded-lg py-2">
-      ✓ Coupon copied
+
+    <div className="mb-3 text-center text-xs text-[#2E1A47] bg-[#F7F5FA] border border-[#DDD5EA] rounded-xl py-2">
+
+      ✓ Offer code copied
+
     </div>
+
   )}
 
 
+  {/* Offer Cards */}
   <div className="space-y-3">
 
-    {/* Coupon 1 */}
+    {/* Offer 1 */}
     <button
-      onClick={() => copyCoupon("BURGER20")}
-      className="w-full bg-[#F7F3ED] border border-gray-200 rounded-xl p-3 text-left active:scale-[0.99]"
+      onClick={() => copyCoupon("ENCIRCLE750")}
+      className="w-full bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl p-4 text-left active:scale-[0.99] transition"
     >
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-start justify-between gap-3">
 
         <div>
-          <h4 className="text-sm font-semibold text-gray-900">
-            20% Off Any Burger
+
+          <h4 className="text-sm font-semibold text-[#1F1B24]">
+
+            ₹750 Off on Premium Watches
+
           </h4>
 
-          <p className="text-[11px] text-gray-500">
-            Use code <span className="font-bold text-[#E1251B]">BURGER20</span>
+          <p className="text-[11px] text-[#6B6475] mt-1 leading-relaxed">
+
+            Applicable on selected Titan and Edge collections above ₹9,999.
+
           </p>
+
+
+          <div className="mt-3 inline-flex items-center bg-white border border-[#DDD5EA] rounded-lg px-2.5 py-1">
+
+            <span className="text-[10px] text-[#6B6475] mr-1">
+              Code:
+            </span>
+
+            <span className="text-[11px] font-bold tracking-wide text-[#2E1A47]">
+              ENCIRCLE750
+            </span>
+
+          </div>
+
         </div>
 
-        <div className="text-xl">🍔</div>
+
+        <div className="w-11 h-11 rounded-xl bg-[#2E1A47]/10 flex items-center justify-center flex-shrink-0">
+
+          <Watch className="w-5 h-5 text-[#2E1A47]" />
+
+        </div>
 
       </div>
 
     </button>
 
 
-    {/* Coupon 2 */}
+    {/* Offer 2 */}
     <button
-      onClick={() => copyCoupon("FREECHIPS")}
-      className="w-full bg-[#F7F3ED] border border-gray-200 rounded-xl p-3 text-left active:scale-[0.99]"
+      onClick={() => copyCoupon("AIRA500")}
+      className="w-full bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl p-4 text-left active:scale-[0.99] transition"
     >
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-start justify-between gap-3">
 
         <div>
-          <h4 className="text-sm font-semibold text-gray-900">
-            Free Chips with Burger
+
+          <h4 className="text-sm font-semibold text-[#1F1B24]">
+
+            Complimentary Smartwatch Strap
+
           </h4>
 
-          <p className="text-[11px] text-gray-500">
-            Use code <span className="font-bold text-[#E1251B]">FREECHIPS</span>
+          <p className="text-[11px] text-[#6B6475] mt-1 leading-relaxed">
+
+            Receive an additional strap on selected Titan smartwatches.
+
           </p>
+
+
+          <div className="mt-3 inline-flex items-center bg-white border border-[#DDD5EA] rounded-lg px-2.5 py-1">
+
+            <span className="text-[10px] text-[#6B6475] mr-1">
+              Code:
+            </span>
+
+            <span className="text-[11px] font-bold tracking-wide text-[#2E1A47]">
+              AIRA500
+            </span>
+
+          </div>
+
         </div>
 
-        <div className="text-xl">🍟</div>
+
+        <div className="w-11 h-11 rounded-xl bg-[#C8A96B]/15 flex items-center justify-center flex-shrink-0">
+
+          <Gift className="w-5 h-5 text-[#C8A96B]" />
+
+        </div>
 
       </div>
 
     </button>
 
 
-    {/* Coupon 3 */}
+    {/* Offer 3 */}
     <button
-      onClick={() => copyCoupon("DELIVERYFREE")}
-      className="w-full bg-[#F7F3ED] border border-gray-200 rounded-xl p-3 text-left active:scale-[0.99]"
+      onClick={() => copyCoupon("HELIOS15")}
+      className="w-full bg-[#F7F5FA] border border-[#E6E1EE] rounded-2xl p-4 text-left active:scale-[0.99] transition"
     >
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-start justify-between gap-3">
 
         <div>
-          <h4 className="text-sm font-semibold text-gray-900">
-            Free Delivery
+
+          <h4 className="text-sm font-semibold text-[#1F1B24]">
+
+            Extra 15% Off at Helios
+
           </h4>
 
-          <p className="text-[11px] text-gray-500">
-            Use code <span className="font-bold text-[#E1251B]">DELIVERYFREE</span>
+          <p className="text-[11px] text-[#6B6475] mt-1 leading-relaxed">
+
+            Exclusive partner benefit for Titan Encircle members.
+
           </p>
+
+
+          <div className="mt-3 inline-flex items-center bg-white border border-[#DDD5EA] rounded-lg px-2.5 py-1">
+
+            <span className="text-[10px] text-[#6B6475] mr-1">
+              Code:
+            </span>
+
+            <span className="text-[11px] font-bold tracking-wide text-[#2E1A47]">
+              HELIOS15
+            </span>
+
+          </div>
+
         </div>
 
-        <div className="text-xl">🛵</div>
+
+        <div className="w-11 h-11 rounded-xl bg-[#2E1A47]/10 flex items-center justify-center flex-shrink-0">
+
+          <Sparkles className="w-5 h-5 text-[#2E1A47]" />
+
+        </div>
 
       </div>
 
@@ -2209,22 +2306,28 @@ Powered by RDEP
 
   {/* CTA */}
   <a
-    href="https://grilld.com.au/menu"
+    href="https://www.titanencircle.com/"
     target="_blank"
     rel="noopener noreferrer"
   >
-    <button className="w-full mt-4 bg-[#E1251B] text-white h-10 text-xs font-semibold rounded-xl transition active:scale-[0.98]">
-      Shop Grill'd
+
+    <button className="w-full mt-5 bg-[#2E1A47] text-white h-11 text-sm font-semibold rounded-2xl transition active:scale-[0.98] hover:opacity-95">
+
+      Explore Member Benefits
+
     </button>
+
   </a>
 
 
-  <p className="mt-2 text-[9px] text-center text-gray-400">
-    Tap a coupon to copy the code. Offers may vary by location.
+  {/* Footer */}
+  <p className="mt-3 text-[10px] text-center text-[#6B6475] leading-relaxed px-4">
+
+    Personalized benefits may vary based on membership tier, brand and purchase history.
+
   </p>
 
 </div>
-
 
           {/* Receipt Actions */}
 <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
