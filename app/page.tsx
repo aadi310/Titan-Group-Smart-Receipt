@@ -809,18 +809,18 @@ Powered by RDEP
         <div className="flex flex-col w-full gap-3 pb-4 px-3">
 
           {/* Top Section */}
-<div className="bg-white rounded-2xl shadow-md border border-gray-200 mt-4 mx-3 overflow-hidden">
+<div className="bg-white rounded-2xl shadow-md border border-[#E6E1EE] mt-4 mx-3 overflow-hidden">
 
   {/* Header */}
-  <div className="bg-[#E1251B] px-5 pt-5 pb-6 text-white">
+  <div className="bg-[#2E1A47] px-5 pt-5 pb-6 text-white">
 
     <div className="flex items-start justify-between">
 
       {/* Logo */}
       <img
-        src="https://images.ctfassets.net/quhz534suzyl/2rUTIjKRBjBY71k8KDNy2O/61486e3c5c2ccd8dbf5664fc7127bb9d/logo_grilld_round_tagline_321da6fff8.svg"
-        alt="Grill'd"
-        className="h-28 w-auto"
+        src="/images/design-mode/titan-logo.svg"
+        alt="Titan"
+        className="h-16 w-auto object-contain"
       />
 
       {/* QR */}
@@ -837,31 +837,33 @@ Powered by RDEP
 
 
     {/* Greeting */}
-    <div className="mt-3">
-      <div className="text-lg font-semibold">
-        Thanks {customerName}
+    <div className="mt-5">
+      <div className="text-lg font-semibold tracking-wide">
+        Thank You {customerName}
       </div>
 
-      <div className="text-sm opacity-90">
-        Your Grill'd order is complete
+      <div className="text-sm text-white/80 mt-1">
+        Your Titan purchase is confirmed
       </div>
     </div>
 
 
     {/* Amount */}
-    <div className="mt-4 bg-[#B51E17] rounded-xl p-4 flex justify-between items-center">
+    <div className="mt-5 bg-[#221235] rounded-xl p-4 flex justify-between items-center border border-white/10">
 
       <div>
-        <div className="text-xs opacity-80">
+        <div className="text-xs uppercase tracking-wider text-white/60">
           Amount Paid
         </div>
 
-        <div className="text-3xl font-semibold">
-          ${currentReceipt.total.toFixed(2)}
+        <div className="text-3xl font-semibold mt-1">
+          ₹{currentReceipt.total.toLocaleString("en-IN")}
         </div>
       </div>
 
-      <User2 className="h-7 w-7 text-white/80" />
+      <div className="h-12 w-12 rounded-full bg-[#C8A96B]/20 flex items-center justify-center">
+        <User2 className="h-6 w-6 text-[#C8A96B]" />
+      </div>
 
     </div>
 
@@ -871,27 +873,38 @@ Powered by RDEP
   {/* Receipt Metadata */}
   <div className="p-4 bg-white">
 
-    <div className="bg-gray-50 rounded-xl border border-gray-200 p-3 space-y-2">
+    <div className="bg-[#F7F5FA] rounded-xl border border-[#E6E1EE] p-3 space-y-2">
 
       {/* Receipt ID */}
       <div className="flex justify-between items-center">
-        <span className="text-xs text-gray-500">
-          Receipt ID:
+        <span className="text-xs text-[#6B6475]">
+          Receipt ID
         </span>
 
-        <span className="text-sm font-semibold tracking-wide text-right">
+        <span className="text-sm font-semibold tracking-wide text-right text-[#1F1B24]">
           {currentReceipt.id}
         </span>
       </div>
 
       {/* Date & Time */}
       <div className="flex justify-between items-center">
-        <span className="text-xs text-gray-500">
-          Date & Time:
+        <span className="text-xs text-[#6B6475]">
+          Date & Time
         </span>
 
-        <span className="text-sm font-semibold text-right">
-          {currentReceipt.date} {currentReceipt.time}
+        <span className="text-sm font-semibold text-right text-[#1F1B24]">
+          {currentReceipt.date} • {currentReceipt.time}
+        </span>
+      </div>
+
+      {/* Store */}
+      <div className="flex justify-between items-center">
+        <span className="text-xs text-[#6B6475]">
+          Store
+        </span>
+
+        <span className="text-sm font-semibold text-right text-[#1F1B24]">
+          {currentReceipt.branch}
         </span>
       </div>
 
@@ -900,7 +913,6 @@ Powered by RDEP
   </div>
 
 </div>
-
           {/* Purchase Details */}
 <div className="bg-white rounded-2xl shadow-md border border-gray-200 mt-4 mx-3 p-4">
 
