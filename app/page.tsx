@@ -1303,7 +1303,7 @@ Powered by RDEP
   <div className="relative">
 
     <img
-      src="/images/design-mode/titan-sbi-1400.jpg"
+      src="/images/design-mode/Titan-sbi-1400.jpg"
       alt="Titan Encircle"
       className="w-full h-40 object-cover"
     />
@@ -1326,10 +1326,6 @@ Powered by RDEP
 
       <div className="text-2xl font-semibold leading-tight">
         Titan Encircle
-      </div>
-
-      <div className="text-sm text-white/80 mt-1 max-w-[280px] leading-relaxed">
-        One membership across Titan, Fastrack, Tanishq, Helios and more.
       </div>
 
     </div>
